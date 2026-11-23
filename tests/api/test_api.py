@@ -9,6 +9,13 @@ def response(base_url):
 def data(response):
     return response.json()
 
+@pytest.mark.parametrize("post_id", [1, 2, 3], ids=["post1", "post2", "post3"])
+def test_post_exists(base_url, post_id):
+    response = requests.get(base_url + f"/posts/{post_id}")
+
+    assert response.status_code == 200
+    assert response.json()["id"] == post_id
+
 def test_get_post_status_code(response):
     assert response.status_code == 200
 
