@@ -1,10 +1,6 @@
 import pytest
 import requests
 
-
-@pytest.fixture(scope="module")
-def payload():
-    return {"title": "Mój post", "body": "Treść", "userId": 1}
 @pytest.fixture(scope="module")
 def post_response(base_url, payload):
     return requests.post(base_url + "/posts", json=payload)

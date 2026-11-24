@@ -2,9 +2,7 @@ import pytest
 import requests
 
 
-@pytest.fixture(scope="module")
-def payload():
-    return {"title": "put i delete test", "body": "to jest test api", "userId": 1}
+
 
 @pytest.fixture(scope="module")
 def put_response(base_url, payload):
