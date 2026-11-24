@@ -18,7 +18,7 @@ def test_num_of_elements(liczby):
 @pytest.mark.parametrize ("dane, oczekiwane", [([], {"even":0,"odd":0}),
                                                ([-1, -2, -3, -4], {"even":2,"odd":2}),
                                                ([0], {"even":1,"odd":0}),
-                                               ([123124312], {"even":1,"odd":0})])
+                                               ([123124312], {"even":1,"odd":0})], ids=["empty list", "only negative numbers", "only zero", "one big number"])
 def test_parametric_odd_even(dane, oczekiwane):
     assert odd_even_check(dane) == oczekiwane
 
