@@ -10,7 +10,7 @@ def test_post_code(post_response):
 
 def test_post_payload(post_response, payload):
     response = post_response.json()
-    print(response)
+
 
     assert response["title"] == payload["title"]
     assert response["body"] == payload["body"]

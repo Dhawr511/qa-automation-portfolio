@@ -12,7 +12,7 @@ def put_response(base_url, payload):
 def delete_response(base_url, payload):
     return requests.delete(base_url + "/posts/1")
 
-def test_put_returns_200(put_response, payload):
+def test_put_returns_200(put_response):
 
     assert put_response.status_code == 200
 

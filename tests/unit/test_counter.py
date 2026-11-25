@@ -1,4 +1,3 @@
-import pytest
 from even_counter import even_number_counter
 
 def test_negative_number():
